@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ak47</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Press Start 2P', cursive;
+      color: white;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+      z-index: 10;
+    }
+
+    .header h1 {
+      font-size: 20px;
+      color: #fff;
+      margin: 5px 0;
+      letter-spacing: 2px;
+    }
+
+    .header-buttons {
+      margin-top: 5px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .header-buttons button {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 8px;
+      padding: 6px 10px;
+      background: #191919;
+      border: 1px solid #444;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .header-buttons button:hover {
+      background: #333;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding-top: 120px;
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      background: #111;
+      border-radius: 16px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    }
+
+    .card img.profile {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      border: 2px solid #fff;
+    }
+
+    .card h2 {
+      margin: 10px 0 8px;
+      font-size: 16px;
+      color: #ccc;
+    }
+
+    .card p.description {
+      font-size: 10px;
+      line-height: 1.4em;
+      color: #ccc;
+      margin: 6px 0;
+    }
+
+    .alias-box {
+      background-color: #1a1a1a;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 10px;
+      color: #ccc;
+      margin: 12px 0;
+      display: inline-block;
+    }
+
+    .contact {
+      font-size: 9px;
+      color: #ccc;
+      margin-top: 10px;
+    }
+
+    .contact div {
+      margin-bottom: 6px;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .icons img {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s;
+    }
+
+    .icons img:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video id="bg-video" autoplay muted loop playsinline>
+    <source src="https://files.catbox.moe/cbqdbm.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>ak47</h1>
+    <div class="header-buttons">
+      <a href="comsluts.html"><button>com sluts</button></a>
+      <a href="predpage.html"><button>pedos</button></a>
+      <a href="index.html"><button>home</button></a>
+    </div>
+  </div>
+
+  <!-- Profile Card -->
+  <div class="card-container">
+    <div class="card">
+      <img src="usericon.png" alt="User Icon" class="profile">
+      <h2>x7c3</h2>
+      <p class="description">Owner of ak47.bio</p>
+
+      <div class="alias-box">alias: x7c3</div>
+
+      <div class="contact">
+        <div><img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" width="12"> Discord: @x7c3</div>
+        <div><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" width="12"> Telegram: @orquas</div>
+      </div>
+
+      <div class="icons">
+        <a href="https://discord.com/users/x7c3" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord">
+        </a>
+        <a href="https://t.me/orquas" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

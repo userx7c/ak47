@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enter Network</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+  body {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  body.fade-in {
+    opacity: 1;
+  }
+
+  body.fade-out {
+    opacity: 0;
+  }
+</style>
+
+
+</head>
+<body>
+  <!-- Video Background -->
+  <video id="bg-video" autoplay loop muted playsinline>
+    <source src="background.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Overlay Content -->
+  <div class="container">
+    <div class="content">
+      <img src="mainicon.png" alt="Main Icon" class="main-icon" />
+      <a href="network.html" class="enter-button">ENTER NETWORK</a>
+      <p class="small-text">discord.gg/clap</p>
+    </div>
+  </div>
+
+  
+
+  <script>
+  // Fade-in on load
+  window.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("fade-in");
+  });
+
+  // Fade-out on navigation
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href.startsWith('#') && !href.startsWith('javascript:')) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.body.classList.remove("fade-in");
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          window.location.href = this.href;
+        }, 300); // match transition duration
+      });
+    }
+  });
+</script>
+
+
+</body>
+</html>
