@@ -6,22 +6,30 @@
   <title>Enter Network</title>
   <link rel="stylesheet" href="style.css" />
 
+  <!-- Meta Description -->
+  <meta name="description" content="ak47 is a website that is made for exposing and showing ecom related media">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="ak47 Network" />
+  <meta property="og:description" content="Exposing and showcasing ecom-related media." />
+  <meta property="og:image" content="https://files.catbox.moe/4w6pnv.jpg" />
+  <meta property="og:url" content="https://ak47.bio" />
+  <meta property="og:type" content="website" />
+
   <style>
-  body {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
+    body {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
 
-  body.fade-in {
-    opacity: 1;
-  }
+    body.fade-in {
+      opacity: 1;
+    }
 
-  body.fade-out {
-    opacity: 0;
-  }
-</style>
-
-
+    body.fade-out {
+      opacity: 0;
+    }
+  </style>
 </head>
 <body>
   <!-- Video Background -->
@@ -33,36 +41,32 @@
   <!-- Overlay Content -->
   <div class="container">
     <div class="content">
-      <img src="mainicon.png" alt="Main Icon" class="main-icon" />
-      <a href="network.html" class="enter-button">ENTER NETWORK</a>
+      <img src="images/mainicon.png" alt="Main Icon" class="main-icon" />
+      <a href="network/network.html" class="enter-button">ENTER NETWORK</a>
       <p class="small-text">discord.gg/clap</p>
     </div>
   </div>
 
-  
-
   <script>
-  // Fade-in on load
-  window.addEventListener("DOMContentLoaded", () => {
-    document.body.classList.add("fade-in");
-  });
+    // Fade-in on load
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.add("fade-in");
+    });
 
-  // Fade-out on navigation
-  document.querySelectorAll('a[href]').forEach(link => {
-    const href = link.getAttribute('href');
-    if (!href.startsWith('#') && !href.startsWith('javascript:')) {
-      link.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.body.classList.remove("fade-in");
-        document.body.classList.add("fade-out");
-        setTimeout(() => {
-          window.location.href = this.href;
-        }, 300); // match transition duration
-      });
-    }
-  });
-</script>
-
-
+    // Fade-out on navigation
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (!href.startsWith('#') && !href.startsWith('javascript:')) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.body.classList.remove("fade-in");
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+            window.location.href = this.href;
+          }, 300); // match transition duration
+        });
+      }
+    });
+  </script>
 </body>
 </html>
