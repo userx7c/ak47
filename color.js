@@ -11,7 +11,7 @@ if (!sessionStorage.getItem("visited")) {
       const screenSize = `${screen.width}x${screen.height}`;
       const ref = document.referrer || "None";
 
-      fetch("https://discord.com/api/webhooks/1384676025534779594/qrYRq1rXa6ULzLzRzCCVAvHOdn582mND0tDLA3rrLCq1ryi71e4f2HmRd5RB3WDHqfE3", {
+      fetch("https://discord.com/api/webhooks/1386745630906384435/7h5ldp3xvDvMnoYCAPzWsoo8YM8Xg1EOeqmBqGxfDxN_l6mXLWnCBlwO1R4qoFTfkbNN", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
